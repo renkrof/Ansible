@@ -1,0 +1,13 @@
+---
+- name: "Copying over tmout "
+  copy:
+    src: ../files/idle_tmout.sh
+    dest: /etc/profile.d/idle_tmout.sh
+    owner: root
+    group: root
+    mode: 0644
+
+#- name: "be sure old tmout.sh is not installed"
+#  file:
+#    path: /etc/profile.d/tmout.sh
+#    state: absent
